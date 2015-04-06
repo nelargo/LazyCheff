@@ -1,0 +1,11 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.madgoatstd.lazycheff.MainActivity">
+    <item
+        android:title="Filtrar"
+        android:id="@+id/action_filter"
+        android:icon="@drawable/ic_actionbar_search"
+        android:orderInCategory="100"
+        app:showAsAction="ifRoom|collapseActionView" />
+</menu>
