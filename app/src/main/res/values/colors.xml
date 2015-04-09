@@ -5,5 +5,14 @@
     <color name="accentColor">#F44336</color>
     <color name="dividerColor">#B6B6B6</color>
 
+    <color name="primary">#3f51b5</color>
+    <color name="primary_dark">#303f9f</color>
+    <color name="primary_light">#c5cae9</color>
+    <color name="accent">#f44336</color>
+    <color name="accent_light">#ef9a9a</color>
+    <color name="primary_text">#212121</color>
+    <color name="secondary_text">#727272</color>
+    <color name="icons">#ffffff</color>
+    <color name="divider">#b6b6b6</color>
 
 </resources>

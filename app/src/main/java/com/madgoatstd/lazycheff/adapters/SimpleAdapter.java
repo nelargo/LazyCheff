@@ -16,17 +16,21 @@ import java.util.Collections;
 import java.util.List;
 
 public class SimpleAdapter extends RecyclerView.Adapter<SimpleAdapter.MyViewHolder> {
+    private static int TYPE_INGREDIENTS = 0;
+    private static int TYPE_CART = 1;
     private Context mContext;
     private LayoutInflater inflater;
     private View container;
     private ClickListener clickListener;
     List<Ingredient> data = Collections.emptyList();
     int lastPosition = -1;
+    private int type;
 
-    public SimpleAdapter(Context context, List<Ingredient> data) {
+    public SimpleAdapter(Context context, List<Ingredient> data, int type) {
         inflater = LayoutInflater.from(context);
         mContext = context;
         this.data = data;
+        this.type = type;
     }
 
     public void setClickListener(ClickListener clickListener) {
@@ -56,7 +60,7 @@ public class SimpleAdapter extends RecyclerView.Adapter<SimpleAdapter.MyViewHold
     @Override
     public MyViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         container = inflater.inflate(R.layout.simple_row, parent, false);
-        MyViewHolder holder = new MyViewHolder(container);
+        MyViewHolder holder = new MyViewHolder(container, this.type);
         return holder;
     }
 
@@ -85,13 +89,21 @@ public class SimpleAdapter extends RecyclerView.Adapter<SimpleAdapter.MyViewHold
         TextView title;
         ImageView licon, ricon;
         View container;
+        int type;
 
-        public MyViewHolder(View itemView) {
+        public MyViewHolder(View itemView, int type) {
             super(itemView);
+            this.type = type;
             this.container = itemView;
             title = (TextView) itemView.findViewById(R.id.listTitle);
             licon = (ImageView) itemView.findViewById(R.id.listIcon);
             ricon = (ImageView) itemView.findViewById(R.id.listAdd);
+            if(type == TYPE_INGREDIENTS){
+                ricon.setImageResource(R.drawable.ic_add);
+            }
+            if(type == TYPE_CART){
+                ricon.setImageResource(R.drawable.ic_delete_black);
+            }
             ricon.setOnClickListener(this);
         }
 
@@ -99,13 +111,13 @@ public class SimpleAdapter extends RecyclerView.Adapter<SimpleAdapter.MyViewHold
         public void onClick(View view) {
             if (view.getId() == R.id.listAdd) {
                 if (clickListener != null) {
-                    clickListener.itemClicked(view, getAdapterPosition());
+                    clickListener.itemClicked(view, getAdapterPosition(), this.type);
                 }
             }
         }
     }
 
     public interface ClickListener {
-        public void itemClicked(View view, int position);
+        public void itemClicked(View view, int position, int type);
     }
 }

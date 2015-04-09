@@ -9,6 +9,7 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="16dp"
         android:layout_marginRight="16dp"
+        android:layout_alignParentRight="true"
         android:src="@drawable/ic_andy_black"
         android:layout_centerVertical="true"/>
 
@@ -21,9 +22,10 @@
         android:textSize="16sp"
         android:layout_centerVertical="true"/>
 
+
     <ImageView
         android:id="@+id/listAdd"
-        android:layout_alignParentRight="true"
+        android:layout_alignParentLeft="true"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="16dp"
