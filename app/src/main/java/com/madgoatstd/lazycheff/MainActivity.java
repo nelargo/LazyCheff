@@ -3,18 +3,15 @@ package com.madgoatstd.lazycheff;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v4.view.MarginLayoutParamsCompat;
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
-import android.util.AttributeSet;
 import android.util.DisplayMetrics;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
@@ -24,8 +21,6 @@ import android.widget.Toast;
 import com.afollestad.materialdialogs.MaterialDialog;
 import com.daimajia.androidanimations.library.Techniques;
 import com.daimajia.androidanimations.library.YoYo;
-import com.google.zxing.integration.android.IntentIntegrator;
-import com.google.zxing.integration.android.IntentResult;
 import com.madgoatstd.lazycheff.adapters.Ingredient;
 import com.madgoatstd.lazycheff.adapters.SimpleAdapter;
 import com.oguzdev.circularfloatingactionmenu.library.FloatingActionButton;
@@ -46,7 +41,7 @@ public class MainActivity extends ActionBarActivity implements SimpleAdapter.Cli
     private List<Ingredient> cart;
     private TextView footerText2, footerText1;
     FloatingActionButton actionButton;
-    FloatingActionButton.LayoutParams normal,elevated;
+    FloatingActionButton.LayoutParams normal;
     ImageView icon;
 
 
@@ -72,13 +67,13 @@ public class MainActivity extends ActionBarActivity implements SimpleAdapter.Cli
         simpleAdapterIng = new SimpleAdapter(this, getData(), TYPE_INGREDIENTS);
         simpleAdapterIng.setClickListener(this);
         recyclerView.setAdapter(simpleAdapterIng);
-        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+        recyclerView.setLayoutManager(new LinearLayoutManager(mContext));
 
         cart = new ArrayList<>();
         simpleAdapterCart = new SimpleAdapter(this, cart, TYPE_CART);
         simpleAdapterCart.setClickListener(this);
         listCart.setAdapter(simpleAdapterCart);
-        listCart.setLayoutManager(new LinearLayoutManager(this));
+        listCart.setLayoutManager(new LinearLayoutManager(mContext));
 
         footerText1 = (TextView) findViewById(R.id.footerbartext1);
         footerText2 = (TextView) findViewById(R.id.footerbartext2);
@@ -89,23 +84,30 @@ public class MainActivity extends ActionBarActivity implements SimpleAdapter.Cli
             @Override
             public void onClick(View view) {
                 if (listCart.getVisibility() == View.VISIBLE) {
-                    YoYo.with(Techniques.SlideOutDown)
-                            .duration(600)
-                            .playOn(listCart);
-
+                    YoYo.with(Techniques.Bounce)
+                            .duration(500)
+                            .playOn(actionButton);
+                    YoYo.with(Techniques.Bounce)
+                            .duration(500)
+                            .playOn(footer);
                     listCart.setVisibility(View.GONE);
                     footerText2.setVisibility(View.VISIBLE);
                     footerText1.setVisibility(View.GONE);
                     normal = (FloatingActionButton.LayoutParams)actionButton.getLayoutParams();
                     normal.setMargins(0,0,16,16);
                     actionButton.setLayoutParams(normal);
+                    actionButton.setBackgroundResource(R.drawable.fab_primary);
+                    footerbar.setBackgroundColor(getResources().getColor(R.color.primary));
                 } else {
                     YoYo.with(Techniques.Bounce)
-                            .duration(1000)
-                            .playOn(listCart);
+                            .duration(500)
+                            .playOn(footer);
                     YoYo.with(Techniques.Bounce)
-                            .duration(1000)
-                            .playOn(footerbar);
+                            .duration(500)
+                            .playOn(actionButton);
+
+                    actionButton.setBackgroundResource(R.drawable.fab_secundary);
+                    footerbar.setBackgroundColor(getResources().getColor(R.color.accentColor));
                     listCart.setVisibility(View.VISIBLE);
                     footerText1.setVisibility(View.VISIBLE);
                     footerText2.setVisibility(View.GONE);
@@ -129,7 +131,6 @@ public class MainActivity extends ActionBarActivity implements SimpleAdapter.Cli
                             @Override
                             public void onPositive(MaterialDialog dialog) {
                                 super.onPositive(dialog);
-                                Toast.makeText(mContext, "Buscando", Toast.LENGTH_SHORT).show();
                                 startActivityForResult(new Intent(mContext,ResultsActivity.class),0);
                             }
 
@@ -197,12 +198,12 @@ public class MainActivity extends ActionBarActivity implements SimpleAdapter.Cli
         footerText2.setText("Nº de Ingredientes: " + cart.size());
 
         if (cart.size() > 0 && footer.getVisibility() == View.GONE) {
-            YoYo.with(Techniques.BounceInUp)
-                    .duration(600)
+            YoYo.with(Techniques.SlideInUp)
+                    .duration(500)
                     .playOn(footer);
             footer.setVisibility(View.VISIBLE);
             YoYo.with(Techniques.BounceInUp)
-                    .duration(800)
+                    .duration(500)
                     .playOn(actionButton);
             actionButton.setVisibility(View.VISIBLE);
             normal = (FloatingActionButton.LayoutParams)actionButton.getLayoutParams();
@@ -210,10 +211,10 @@ public class MainActivity extends ActionBarActivity implements SimpleAdapter.Cli
             actionButton.setLayoutParams(normal);
         } else if(cart.size() == 0 && footer.getVisibility() == View.VISIBLE){
             YoYo.with(Techniques.SlideOutDown)
-                    .duration(600)
+                    .duration(500)
                     .playOn(footer);
             YoYo.with(Techniques.SlideOutDown)
-                    .duration(800)
+                    .duration(500)
                     .playOn(actionButton);
 
             listCart.setVisibility(View.GONE);
@@ -221,6 +222,9 @@ public class MainActivity extends ActionBarActivity implements SimpleAdapter.Cli
             footerText2.setVisibility(View.VISIBLE);
             footer.setVisibility(View.GONE);
             actionButton.setVisibility(View.GONE);
+
+            actionButton.setBackgroundResource(R.drawable.fab_primary);
+            footerbar.setBackgroundColor(getResources().getColor(R.color.primary));
         }
     }
 
@@ -231,11 +235,7 @@ public class MainActivity extends ActionBarActivity implements SimpleAdapter.Cli
     }
 
     public void onActivityResult(int requestCode, int resultCode, Intent intent) {
-        IntentResult scanResult = IntentIntegrator.parseActivityResult(requestCode, resultCode, intent);
-        if (scanResult != null) {
-            // handle scan result
-            Log.d("ZXINGSASD", "" + scanResult.toString());
-        }
+
     }
 
     @Override

@@ -1,7 +1,6 @@
 package com.madgoatstd.lazycheff.adapters;
 
 import android.content.Context;
-import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -16,7 +15,7 @@ import com.madgoatstd.lazycheff.R;
 import java.util.Collections;
 import java.util.List;
 
-public class ResultAdapter extends RecyclerView.Adapter<ResultAdapter.MyViewHolder> {
+public class RecipeAdapter extends RecyclerView.Adapter<RecipeAdapter.MyViewHolder> {
 
     private Context mContext;
     private LayoutInflater inflater;
@@ -25,14 +24,10 @@ public class ResultAdapter extends RecyclerView.Adapter<ResultAdapter.MyViewHold
     int lastPosition = -1;
     private int type;
 
-    public ResultAdapter(Context context, List<Recipe> data) {
+    public RecipeAdapter(Context context, List<Recipe> data) {
         inflater = LayoutInflater.from(context);
         mContext = context;
         this.data = data;
-    }
-
-    public Recipe getItem(int position) {
-        return data.get(position);
     }
 
     @Override
@@ -45,10 +40,6 @@ public class ResultAdapter extends RecyclerView.Adapter<ResultAdapter.MyViewHold
     @Override
     public void onBindViewHolder(MyViewHolder holder, int position) {
         Recipe current = data.get(position);
-        holder.title.setText(current.name);
-        holder.difficult.setText(current.DIFFICULT_PREFIX+current.difficult+current.DIFFICULT_POSTFIX);
-        holder.time.setText(current.TIME_PREFIX+current.timeP+current.timeC+current.TIME_POSTFIX);
-        holder.icon.setImageResource(R.mipmap.ic_launcher);
         setAnimation(holder.itemView, position);
     }
 
