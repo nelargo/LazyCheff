@@ -21,6 +21,7 @@ public class ResultAdapter extends RecyclerView.Adapter<ResultAdapter.MyViewHold
     private Context mContext;
     private LayoutInflater inflater;
     private View container;
+    private ClickListener clickListener;
     List<Recipe> data = Collections.emptyList();
     int lastPosition = -1;
     private int type;
@@ -29,6 +30,10 @@ public class ResultAdapter extends RecyclerView.Adapter<ResultAdapter.MyViewHold
         inflater = LayoutInflater.from(context);
         mContext = context;
         this.data = data;
+    }
+
+    public void setClickListener(ClickListener clickListener) {
+        this.clickListener = clickListener;
     }
 
     public Recipe getItem(int position) {
@@ -66,7 +71,7 @@ public class ResultAdapter extends RecyclerView.Adapter<ResultAdapter.MyViewHold
     }
 
 
-    class MyViewHolder extends RecyclerView.ViewHolder{
+    class MyViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
         TextView title, difficult, time;
         ImageView icon;
 
@@ -77,7 +82,18 @@ public class ResultAdapter extends RecyclerView.Adapter<ResultAdapter.MyViewHold
             difficult = (TextView) itemView.findViewById(R.id.difficult);
             time = (TextView) itemView.findViewById(R.id.time);
             icon = (ImageView) itemView.findViewById(R.id.image);
+            itemView.setOnClickListener(this);
+        }
+
+        @Override
+        public void onClick(View view) {
+                if (clickListener != null) {
+                    clickListener.itemClicked(view, getAdapterPosition());
+                }
 
         }
+    }
+    public interface ClickListener {
+        public void itemClicked(View view, int position);
     }
 }

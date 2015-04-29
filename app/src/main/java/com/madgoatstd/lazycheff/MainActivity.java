@@ -93,6 +93,7 @@ public class MainActivity extends ActionBarActivity implements SimpleAdapter.Cli
                     listCart.setVisibility(View.GONE);
                     footerText2.setVisibility(View.VISIBLE);
                     footerText1.setVisibility(View.GONE);
+
                     normal = (FloatingActionButton.LayoutParams)actionButton.getLayoutParams();
                     normal.setMargins(0,0,16,16);
                     actionButton.setLayoutParams(normal);

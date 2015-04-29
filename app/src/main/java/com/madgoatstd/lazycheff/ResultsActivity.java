@@ -1,6 +1,7 @@
 package com.madgoatstd.lazycheff;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.widget.LinearLayoutManager;
@@ -10,17 +11,21 @@ import android.util.DisplayMetrics;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.MotionEvent;
+import android.view.View;
 import android.widget.ImageView;
 
+import com.daimajia.androidanimations.library.Techniques;
+import com.daimajia.androidanimations.library.YoYo;
 import com.madgoatstd.lazycheff.adapters.Recipe;
 import com.madgoatstd.lazycheff.adapters.ResultAdapter;
+import com.nineoldandroids.animation.Animator;
 import com.oguzdev.circularfloatingactionmenu.library.FloatingActionButton;
 
 import java.util.ArrayList;
 import java.util.List;
 
 
-public class ResultsActivity extends ActionBarActivity {
+public class ResultsActivity extends ActionBarActivity implements ResultAdapter.ClickListener{
     Context mContext;
     private Toolbar toolbar;
     private RecyclerView recyclerView;
@@ -48,8 +53,10 @@ public class ResultsActivity extends ActionBarActivity {
 
         recyclerView = (RecyclerView) findViewById(R.id.ingredientsList);
         adapter = new ResultAdapter(this, getData());
+        adapter.setClickListener(this);
         recyclerView.setAdapter(adapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
+
     }
 
     public static List<Recipe> getData() {
@@ -92,4 +99,33 @@ public class ResultsActivity extends ActionBarActivity {
     }
 
 
+    @Override
+    public void itemClicked(View view, int position) {
+        YoYo.with(Techniques.Tada)
+                .duration(600).withListener(new Animator.AnimatorListener() {
+            @Override
+            public void onAnimationStart(Animator animation) {
+
+            }
+
+            @Override
+            public void onAnimationEnd(Animator animation) {
+                Intent p = new Intent(mContext,RecipeActivity.class);
+                startActivity(p);
+            }
+
+            @Override
+            public void onAnimationCancel(Animator animation) {
+
+            }
+
+            @Override
+            public void onAnimationRepeat(Animator animation) {
+
+            }
+        })
+                .playOn(view);
+
+
+    }
 }

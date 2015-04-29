@@ -62,74 +62,79 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="RecipeActivity.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/madgoatstd/lazycheff/RecipeActivity.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="850">
-              <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="RecipeAdapter.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="RecipeAdapter.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/madgoatstd/lazycheff/adapters/RecipeAdapter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="1.0744921" vertical-offset="0" max-vertical-offset="1105">
-              <caret line="41" column="44" selection-start-line="41" selection-start-column="44" selection-end-line="41" selection-end-column="44" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="893" max-vertical-offset="2363">
+              <caret line="66" column="48" selection-start-line="66" selection-start-column="48" selection-end-line="66" selection-end-column="48" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Recipe.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/madgoatstd/lazycheff/adapters/Recipe.java">
+      <file leaf-file-name="MainActivity.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/madgoatstd/lazycheff/MainActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="16" max-vertical-offset="476">
-              <caret line="8" column="23" selection-start-line="8" selection-start-column="23" selection-end-line="8" selection-end-column="23" />
-              <folding />
+            <state vertical-scroll-proportion="8.75" vertical-offset="2336" max-vertical-offset="4386">
+              <caret line="128" column="47" selection-start-line="128" selection-start-column="47" selection-end-line="128" selection-end-column="47" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="IngredientRecipe.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/madgoatstd/lazycheff/adapters/IngredientRecipe.java">
+      <file leaf-file-name="RecipeActivity.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/madgoatstd/lazycheff/RecipeActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="255">
-              <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-              <folding />
+            <state vertical-scroll-proportion="0.6682927" vertical-offset="2055" max-vertical-offset="2720">
+              <caret line="137" column="45" selection-start-line="137" selection-start-column="45" selection-end-line="137" selection-end-column="45" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#3810#4101#0" expanded="true" />
+                <element signature="e#4078#4079#0" expanded="true" />
+                <element signature="e#4178#4457#0" expanded="true" />
+                <element signature="e#4434#4435#0" expanded="true" />
+                <element signature="e#4694#4985#0" expanded="true" />
+                <element signature="e#4962#4963#0" expanded="true" />
+                <element signature="e#5112#5371#0" expanded="true" />
+                <element signature="e#5352#5353#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ResultsActivity.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/madgoatstd/lazycheff/ResultsActivity.java">
+      <file leaf-file-name="strings.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="138" max-vertical-offset="1428">
-              <caret line="39" column="62" selection-start-line="35" selection-start-column="8" selection-end-line="39" selection-end-column="62" />
+            <state vertical-scroll-proportion="-10.2" vertical-offset="0" max-vertical-offset="408">
+              <caret line="15" column="20" selection-start-line="15" selection-start-column="20" selection-end-line="15" selection-end-column="20" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ResultAdapter.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/madgoatstd/lazycheff/adapters/ResultAdapter.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="170" max-vertical-offset="1207">
-              <caret line="49" column="75" selection-start-line="49" selection-start-column="75" selection-end-line="49" selection-end-column="75" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="activity_recipe.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_recipe.xml">
+      <file leaf-file-name="header_view.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/header_view.xml">
           <provider editor-type-id="android-designer">
             <state />
           </provider>
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-6.296296" vertical-offset="0" max-vertical-offset="408">
-              <caret line="10" column="43" selection-start-line="10" selection-start-column="43" selection-end-line="10" selection-end-column="43" />
+            <state vertical-scroll-proportion="-6.296296" vertical-offset="0" max-vertical-offset="680">
+              <caret line="10" column="35" selection-start-line="10" selection-start-column="35" selection-end-line="10" selection-end-column="35" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="time_difficult_row.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/time_difficult_row.xml">
+          <provider selected="true" editor-type-id="android-designer">
+            <state />
+          </provider>
+          <provider editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="145" max-vertical-offset="1122">
+              <caret line="24" column="8" selection-start-line="25" selection-start-column="29" selection-end-line="25" selection-end-column="35" />
               <folding />
             </state>
           </provider>
@@ -174,6 +179,505 @@
     </option>
     <option name="availableTasks">
       <map>
+        <entry key="$PROJECT_DIR$">
+          <value>
+            <list>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="generateReleaseBuildConfig" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="checkDebugManifest" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="compileReleaseNdk" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Assembles the android (on device) tests for the Debug build." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="assembleDebugAndroidTest" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Uninstalls the Debug build." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="uninstallDebug" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="processDebugManifest" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="compileDebugSources" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="prepareDebugAndroidTestDependencies" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Assembles and tests this project." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="build" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Assembles and tests this project and all projects that depend on it." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="buildDependents" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="generateDebugResValues" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Runs lint on the Release build." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="lintRelease" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Uninstall all applications." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="uninstallAll" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Assembles all Release builds." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="assembleRelease" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="compileDebugNdk" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="processReleaseResources" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="packageDebug" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="packageRelease" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Assembles all Debug builds." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="assembleDebug" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Run unit tests for the Debug build." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="testDebug" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="preDebugAndroidTestBuild" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Creates a version of android.jar that's suitable for unit tests." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="mockableAndroidJar" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="compileReleaseJava" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="generateDebugAndroidTestBuildConfig" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="compileReleaseUnitTestJava" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="preDexRelease" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="generateDebugAndroidTestSources" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="generateDebugSources" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="dexDebug" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="generateDebugResources" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="mergeDebugAssets" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Prepare com.pkmmte.view:circularimageview:1.1" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="prepareComPkmmteViewCircularimageview11Library" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Displays the signing info for each variant." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="signingReport" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="compileReleaseRenderscript" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="compileDebugRenderscript" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="mergeReleaseResources" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="preCompileDebugUnitTestJava" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="generateReleaseResources" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="processReleaseJavaRes" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Uninstalls the android (on device) tests for the Debug build." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="uninstallDebugAndroidTest" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="compileDebugJava" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="processReleaseManifest" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Assembles all variants of all applications and secondary packages." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="assemble" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Runs lint on just the fatal issues in the Release build." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="lintVitalRelease" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="generateReleaseResValues" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Prepare com.yqritc:recyclerview-flexibledivider:1.1.0" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="prepareComYqritcRecyclerviewFlexibledivider110Library" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="mergeDebugResources" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="processDebugResources" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="processDebugAndroidTestJavaRes" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="dexRelease" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="compileDebugAndroidTestNdk" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Uninstalls the Release build." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="uninstallRelease" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Assembles and tests this project and all projects it depends on." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="buildNeeded" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Prepare com.android.support:cardview-v7:22.0.0" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="prepareComAndroidSupportCardviewV72200Library" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Assembles all the Test applications." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="assembleAndroidTest" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="prepareDebugDependencies" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Prepare com.afollestad:material-dialogs:0.7.0.0" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="prepareComAfollestadMaterialDialogs0700Library" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="generateDebugAndroidTestResources" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Displays the Android dependencies of the project." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="androidDependencies" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="checkReleaseManifest" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="generateDebugAndroidTestResValues" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="mergeDebugAndroidTestAssets" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="compileDebugAndroidTestSources" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="dexDebugAndroidTest" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="generateReleaseSources" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="validateDebugSigning" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="processDebugAndroidTestManifest" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="compileDebugAndroidTestJava" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="generateDebugBuildConfig" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Run unit tests for the Release build." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="testRelease" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="compileDebugAidl" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="packageDebugAndroidTest" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="mergeDebugAndroidTestResources" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="preBuild" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Prepare com.android.support:recyclerview-v7:22.0.0" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="prepareComAndroidSupportRecyclerviewV72200Library" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="zipalignDebug" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="compileDebugAndroidTestRenderscript" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Installs and runs the tests for Debug build on connected devices." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="connectedAndroidTest" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="compileDebugUnitTestJava" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="compileLint" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="preDexDebugAndroidTest" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Run all unit tests." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="test" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="mergeReleaseAssets" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="compileDebugUnitTestSources" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Prepare com.android.support:appcompat-v7:22.0.0" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="prepareComAndroidSupportAppcompatV72200Library" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Assembles the unit tests for the Debug build." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="assembleDebugUnitTest" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Installs the android (on device) tests for the Debug build." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="installDebugAndroidTest" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="compileReleaseUnitTestSources" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Prepare com.oguzdev:CircularFloatingActionMenu:1.0.2" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="prepareComOguzdevCircularFloatingActionMenu102Library" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Prepare com.daimajia.androidanimations:library:1.1.3" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="prepareComDaimajiaAndroidanimationsLibrary113Library" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="generateReleaseAssets" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Prepare com.daimajia.easing:library:1.0.1" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="prepareComDaimajiaEasingLibrary101Library" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Deletes the build directory." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="clean" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Assembles the unit tests for the Release build." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="assembleReleaseUnitTest" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Runs lint on all variants." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="lint" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Runs all device checks on currently connected devices." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="connectedCheck" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="prepareReleaseDependencies" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="preDebugBuild" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="compileReleaseAidl" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Prepare com.android.support:support-v4:22.0.0" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="prepareComAndroidSupportSupportV42200Library" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="compileDebugAndroidTestAidl" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="preCompileReleaseUnitTestJava" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="preReleaseBuild" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="preDexDebug" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="processDebugAndroidTestResources" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Installs the Debug build." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="installDebug" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="generateDebugAssets" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="processDebugJavaRes" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Runs lint on the Debug build." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="lintDebug" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="generateDebugAndroidTestAssets" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="compileReleaseSources" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Runs all checks." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="check" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Runs all device checks using Device Providers and Test Servers." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="deviceCheck" />
+              </ExternalTaskPojo>
+            </list>
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/app">
           <value>
             <list>
@@ -677,7 +1181,7 @@
     </option>
     <option name="modificationStamps">
       <map>
-        <entry key="$PROJECT_DIR$" value="4284916229216" />
+        <entry key="$PROJECT_DIR$" value="4284944929186" />
       </map>
     </option>
     <option name="projectBuildClasspath">
@@ -940,7 +1444,6 @@
         <option value="$PROJECT_DIR$/app/src/main/res/values/styles.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/menu/menu_main.xml" />
         <option value="$PROJECT_DIR$/build.gradle" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/madgoatstd/lazycheff/adapters/SimpleAdapter.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/simple_row.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/app_bar.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/values/colors.xml" />
@@ -949,17 +1452,22 @@
         <option value="$PROJECT_DIR$/app/src/main/res/layout/dialog_options.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/result_row.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_results.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/madgoatstd/lazycheff/ResultsActivity.java" />
         <option value="$PROJECT_DIR$/app/build.gradle" />
         <option value="$PROJECT_DIR$/app/src/main/res/drawable/fab_secundary.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/madgoatstd/lazycheff/MainActivity.java" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_recipe.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/madgoatstd/lazycheff/RecipeActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/madgoatstd/lazycheff/adapters/RecipeAdapter.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/madgoatstd/lazycheff/adapters/IngredientRecipe.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/madgoatstd/lazycheff/adapters/ResultAdapter.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/madgoatstd/lazycheff/adapters/Recipe.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/madgoatstd/lazycheff/MainActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/madgoatstd/lazycheff/adapters/SimpleAdapter.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_recipe.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/recipe_row.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/madgoatstd/lazycheff/adapters/ResultAdapter.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/madgoatstd/lazycheff/ResultsActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/madgoatstd/lazycheff/adapters/RecipeAdapter.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/time_difficult_row.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/header_view.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/madgoatstd/lazycheff/RecipeActivity.java" />
       </list>
     </option>
   </component>
@@ -967,7 +1475,7 @@
     <option name="x" value="-8" />
     <option name="y" value="-8" />
     <option name="width" value="1382" />
-    <option name="height" value="784" />
+    <option name="height" value="754" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -995,6 +1503,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="AndroidView">
         <subPane>
           <PATH>
@@ -1005,6 +1514,24 @@
             <PATH_ELEMENT>
               <option name="myItemId" value="Gradle Scripts" />
               <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidBuildScriptsGroupNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="LazyCheff" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="res" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidResFolderNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="values" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidResFolderTypeNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
@@ -1102,13 +1629,10 @@
               <option name="myItemId" value="app" />
               <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="manifests" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidManifestsGroupNode" />
-            </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -1269,8 +1793,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -1290,14 +1812,15 @@
     <property name="LayoutCode.rearrangeEntriesGroovy" value="false" />
     <property name="OverrideImplement.combined" value="true" />
     <property name="OverrideImplement.overriding.sorted" value="false" />
+    <property name="UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager2.WIDTH" value="317" />
   </component>
   <component name="RecentsManager">
     <key name="android.template.packageName">
       <recent name="com.madgoatstd.lazycheff" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\Carlos\Documents\GitHub\LazyCheff\app\src\main\res\drawable" />
       <recent name="C:\Users\Carlos\Documents\GitHub\LazyCheff\app\src\main\res\layout" />
+      <recent name="C:\Users\Carlos\Documents\GitHub\LazyCheff\app\src\main\res\drawable" />
       <recent name="C:\Users\Carlos\Documents\barcodescanner-master\zxing\LazyCheff\app\src\main\res" />
       <recent name="C:\Users\Carlos\Documents\barcodescanner-master\zxing\LazyCheff\app\src\main\res\values" />
     </key>
@@ -1483,26 +2006,26 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="784" extended-state="1" />
+    <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="15" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2977707" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.29598662" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.8694267" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33207262" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32961783" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2655068" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32943144" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Android" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26755852" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24962178" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24886535" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Memory Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -1515,6 +2038,36 @@
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
     </layout>
+    <layout-to-restore>
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.8694267" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="combo" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="15" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2977707" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
+      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.26626325" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32961783" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24962178" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Memory Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
+    </layout-to-restore>
   </component>
   <component name="Vcs.Log.UiProperties">
     <option name="RECENTLY_FILTERED_USER_GROUPS">
@@ -1533,40 +2086,11 @@
     </option>
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager />
+    <breakpoint-manager>
+      <option name="time" value="2" />
+    </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="221">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/colors.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="238">
-          <caret line="3" column="50" selection-start-line="3" selection-start-column="50" selection-end-line="3" selection-end-column="50" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/fab_primary.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="153" max-vertical-offset="323">
-          <caret line="9" column="36" selection-start-line="9" selection-start-column="36" selection-end-line="9" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/madgoatstd/lazycheff/adapters/SimpleAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1428" max-vertical-offset="2193">
-          <caret line="84" column="5" selection-start-line="84" selection-start-column="5" selection-end-line="84" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="493" max-vertical-offset="850">
@@ -1579,7 +2103,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="442" max-vertical-offset="986">
           <caret line="26" column="5" selection-start-line="26" selection-start-column="5" selection-end-line="26" selection-end-column="5" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1594,7 +2117,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="1428" max-vertical-offset="1836">
           <caret line="84" column="0" selection-start-line="84" selection-start-column="0" selection-end-line="84" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1620,7 +2142,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="136" max-vertical-offset="1513">
           <caret line="8" column="29" selection-start-line="8" selection-start-column="29" selection-end-line="8" selection-end-column="29" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1736,14 +2257,6 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="221">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$PROJECT_DIR$/app/build/intermediates/exploded-aar/com.oguzdev/CircularFloatingActionMenu/1.0.2/classes.jar!/com/oguzdev/circularfloatingactionmenu/library/FloatingActionButton.class">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.93950176" vertical-offset="679" max-vertical-offset="1309">
@@ -1751,95 +2264,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/app_bar.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.148148" vertical-offset="0" max-vertical-offset="272">
-          <caret line="5" column="27" selection-start-line="5" selection-start-column="27" selection-end-line="5" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/simple_row.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.6296296" vertical-offset="0" max-vertical-offset="697">
-          <caret line="1" column="74" selection-start-line="1" selection-start-column="16" selection-end-line="1" selection-end-column="74" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/dialog_options.xml">
-      <provider selected="true" editor-type-id="android-designer">
-        <state />
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="187">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/fab_primary.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.08688245" vertical-offset="0" max-vertical-offset="587">
-          <caret line="3" column="20" selection-start-line="3" selection-start-column="20" selection-end-line="3" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/madgoatstd/lazycheff/adapters/SimpleAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1187" max-vertical-offset="1904">
-          <caret line="84" column="5" selection-start-line="84" selection-start-column="5" selection-end-line="84" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/result_row.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.47469458" vertical-offset="0" max-vertical-offset="935">
-          <caret line="16" column="34" selection-start-line="16" selection-start-column="34" selection-end-line="16" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/colors.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="391">
-          <caret line="7" column="21" selection-start-line="7" selection-start-column="21" selection-end-line="7" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/fab_secundary.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="578">
           <caret line="11" column="51" selection-start-line="11" selection-start-column="51" selection-end-line="11" selection-end-column="51" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="420" max-vertical-offset="833">
-          <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="21.592592" vertical-offset="1076" max-vertical-offset="1479">
-          <caret line="29" column="32" selection-start-line="29" selection-start-column="32" selection-end-line="29" selection-end-column="32" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1847,37 +2275,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.25185186" vertical-offset="0" max-vertical-offset="405">
           <caret line="7" column="40" selection-start-line="7" selection-start-column="40" selection-end-line="7" selection-end-column="40" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/madgoatstd/lazycheff/MainActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="3497" max-vertical-offset="3927">
-          <caret line="73" column="49" selection-start-line="73" selection-start-column="49" selection-end-line="73" selection-end-column="49" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_results.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.23076923" vertical-offset="26" max-vertical-offset="442">
-          <caret line="7" column="4" selection-start-line="7" selection-start-column="4" selection-end-line="17" selection-end-column="49" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_recipe.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-6.296296" vertical-offset="0" max-vertical-offset="408">
-          <caret line="10" column="43" selection-start-line="10" selection-start-column="43" selection-end-line="10" selection-end-column="43" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1886,19 +2283,11 @@
         <state vertical-scroll-proportion="0.8826185" vertical-offset="136" max-vertical-offset="714">
           <caret line="31" column="71" selection-start-line="31" selection-start-column="71" selection-end-line="31" selection-end-column="71" />
           <folding>
-            <element signature="e#268#286#0" expanded="true" />
-            <element signature="e#414#432#0" expanded="true" />
-            <element signature="e#747#765#0" expanded="true" />
-            <element signature="e#1089#1120#0" expanded="true" />
+            <element signature="e#268#286#0" expanded="false" />
+            <element signature="e#414#432#0" expanded="false" />
+            <element signature="e#747#765#0" expanded="false" />
+            <element signature="e#1089#1120#0" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/madgoatstd/lazycheff/ResultsActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="138" max-vertical-offset="1428">
-          <caret line="39" column="62" selection-start-line="35" selection-start-column="8" selection-end-line="39" selection-end-column="62" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1906,23 +2295,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="255">
           <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/madgoatstd/lazycheff/adapters/ResultAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="170" max-vertical-offset="1207">
-          <caret line="49" column="75" selection-start-line="49" selection-start-column="75" selection-end-line="49" selection-end-column="75" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/madgoatstd/lazycheff/RecipeActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="850">
-          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1934,11 +2306,204 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/fab_primary.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="34" max-vertical-offset="578">
+          <caret line="2" column="40" selection-start-line="2" selection-start-column="40" selection-end-line="2" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/result_row.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="272" max-vertical-offset="935">
+          <caret line="16" column="34" selection-start-line="16" selection-start-column="34" selection-end-line="16" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.692953" vertical-offset="233" max-vertical-offset="833">
+          <caret line="38" column="23" selection-start-line="38" selection-start-column="23" selection-end-line="38" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_results.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-6.296296" vertical-offset="0" max-vertical-offset="442">
+          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/dialog_options.xml">
+      <provider selected="true" editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1496">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/app_bar.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.1528777" vertical-offset="0" max-vertical-offset="556">
+          <caret line="5" column="27" selection-start-line="5" selection-start-column="27" selection-end-line="5" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/colors.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="391">
+          <caret line="4" column="37" selection-start-line="4" selection-start-column="31" selection-end-line="4" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-6.296296" vertical-offset="408" max-vertical-offset="1479">
+          <caret line="34" column="54" selection-start-line="34" selection-start-column="35" selection-end-line="34" selection-end-column="54" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/simple_row.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-15.740741" vertical-offset="0" max-vertical-offset="697">
+          <caret line="25" column="4" selection-start-line="1" selection-start-column="16" selection-end-line="1" selection-end-column="74" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/recipe_row.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5730337" vertical-offset="0" max-vertical-offset="445">
+          <caret line="15" column="8" selection-start-line="15" selection-start-column="8" selection-end-line="15" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_recipe.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-6.9259257" vertical-offset="0" max-vertical-offset="408">
+          <caret line="11" column="35" selection-start-line="11" selection-start-column="35" selection-end-line="11" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/madgoatstd/lazycheff/adapters/SimpleAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6122807" vertical-offset="1334" max-vertical-offset="1904">
+          <caret line="116" column="9" selection-start-line="116" selection-start-column="9" selection-end-line="116" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/madgoatstd/lazycheff/ResultsActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1955">
+          <caret line="111" column="60" selection-start-line="111" selection-start-column="60" selection-end-line="111" selection-end-column="60" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/madgoatstd/lazycheff/adapters/ResultAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="945" max-vertical-offset="1479">
+          <caret line="90" column="20" selection-start-line="90" selection-start-column="20" selection-end-line="90" selection-end-column="74" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/madgoatstd/lazycheff/adapters/RecipeAdapter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.0744921" vertical-offset="0" max-vertical-offset="1105">
-          <caret line="41" column="44" selection-start-line="41" selection-start-column="44" selection-end-line="41" selection-end-column="44" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="893" max-vertical-offset="2363">
+          <caret line="66" column="48" selection-start-line="66" selection-start-column="48" selection-end-line="66" selection-end-column="48" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/madgoatstd/lazycheff/MainActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="8.75" vertical-offset="2336" max-vertical-offset="4386">
+          <caret line="128" column="47" selection-start-line="128" selection-start-column="47" selection-end-line="128" selection-end-column="47" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/time_difficult_row.xml">
+      <provider selected="true" editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="145" max-vertical-offset="1122">
+          <caret line="24" column="8" selection-start-line="25" selection-start-column="29" selection-end-line="25" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/header_view.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-6.296296" vertical-offset="0" max-vertical-offset="680">
+          <caret line="10" column="35" selection-start-line="10" selection-start-column="35" selection-end-line="10" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-10.2" vertical-offset="0" max-vertical-offset="408">
+          <caret line="15" column="20" selection-start-line="15" selection-start-column="20" selection-end-line="15" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/madgoatstd/lazycheff/RecipeActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6682927" vertical-offset="2055" max-vertical-offset="2720">
+          <caret line="137" column="45" selection-start-line="137" selection-start-column="45" selection-end-line="137" selection-end-column="45" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#3810#4101#0" expanded="true" />
+            <element signature="e#4078#4079#0" expanded="true" />
+            <element signature="e#4178#4457#0" expanded="true" />
+            <element signature="e#4434#4435#0" expanded="true" />
+            <element signature="e#4694#4985#0" expanded="true" />
+            <element signature="e#4962#4963#0" expanded="true" />
+            <element signature="e#5112#5371#0" expanded="true" />
+            <element signature="e#5352#5353#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
