@@ -10,16 +10,13 @@ import android.support.v7.widget.Toolbar;
 import android.util.DisplayMetrics;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.MotionEvent;
 import android.view.View;
-import android.widget.ImageView;
 
 import com.daimajia.androidanimations.library.Techniques;
 import com.daimajia.androidanimations.library.YoYo;
 import com.madgoatstd.lazycheff.adapters.Recipe;
 import com.madgoatstd.lazycheff.adapters.ResultAdapter;
 import com.nineoldandroids.animation.Animator;
-import com.oguzdev.circularfloatingactionmenu.library.FloatingActionButton;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -30,8 +27,6 @@ public class ResultsActivity extends ActionBarActivity implements ResultAdapter.
     private Toolbar toolbar;
     private RecyclerView recyclerView;
     private ResultAdapter adapter;
-    FloatingActionButton actionButton;
-    ImageView icon;
 
 
     @Override
@@ -45,18 +40,17 @@ public class ResultsActivity extends ActionBarActivity implements ResultAdapter.
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         // in Activity Context
-        icon = new ImageView(this); // Create an icon
+        /*icon = new ImageView(this); // Create an icon
         actionButton = new FloatingActionButton.Builder(this)
                 .setContentView(icon)
                 .setBackgroundDrawable(R.drawable.fab_primary)
-                .build();
+                .build();*/
 
         recyclerView = (RecyclerView) findViewById(R.id.ingredientsList);
         adapter = new ResultAdapter(this, getData());
         adapter.setClickListener(this);
         recyclerView.setAdapter(adapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
-
     }
 
     public static List<Recipe> getData() {

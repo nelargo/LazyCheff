@@ -9,12 +9,6 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.Adapter;
-import android.widget.ArrayAdapter;
-import android.widget.ListAdapter;
-import android.widget.Toast;
-
-import com.afollestad.materialdialogs.GravityEnum;
 import com.afollestad.materialdialogs.MaterialDialog;
 import com.daimajia.androidanimations.library.Techniques;
 import com.daimajia.androidanimations.library.YoYo;
@@ -32,7 +26,6 @@ public class RecipeActivity extends ActionBarActivity implements RecipeAdapter.C
     private Toolbar toolbar;
     private RecyclerView recyclerView;
     private RecipeAdapter recipeAdapter;
-    private List<Recipe> recipeList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -104,7 +97,9 @@ public class RecipeActivity extends ActionBarActivity implements RecipeAdapter.C
 
     @Override
     public void itemClicked(View view, int position) {
-        YoYo.with(Techniques.Tada).duration(600).playOn(view);
+        YoYo.with(Techniques.Tada)
+                .duration(600)
+                .playOn(view);
         MaterialDialog.Builder builder;
         if(position == 2){
             builder = new MaterialDialog.Builder(mContext)

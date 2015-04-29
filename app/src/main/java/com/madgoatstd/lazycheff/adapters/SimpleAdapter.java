@@ -99,10 +99,10 @@ public class SimpleAdapter extends RecyclerView.Adapter<SimpleAdapter.MyViewHold
             licon = (ImageView) itemView.findViewById(R.id.listIcon);
             ricon = (ImageView) itemView.findViewById(R.id.listAdd);
             if(type == TYPE_INGREDIENTS){
-                ricon.setImageResource(R.drawable.ic_add);
+                ricon.setImageResource(R.drawable.add_icon_v1);
             }
             if(type == TYPE_CART){
-                ricon.setImageResource(R.drawable.ic_delete_black);
+                ricon.setImageResource(R.drawable.remove_icon_v1);
             }
             ricon.setOnClickListener(this);
         }

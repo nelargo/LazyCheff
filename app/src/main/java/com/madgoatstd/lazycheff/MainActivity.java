@@ -97,8 +97,8 @@ public class MainActivity extends ActionBarActivity implements SimpleAdapter.Cli
                     normal = (FloatingActionButton.LayoutParams)actionButton.getLayoutParams();
                     normal.setMargins(0,0,16,16);
                     actionButton.setLayoutParams(normal);
-                    actionButton.setBackgroundResource(R.drawable.fab_primary);
-                    footerbar.setBackgroundColor(getResources().getColor(R.color.primary));
+                    //actionButton.setBackgroundResource(R.drawable.fab_primary);
+                    //footerbar.setBackgroundColor(getResources().getColor(R.color.primary));
                 } else {
                     YoYo.with(Techniques.Bounce)
                             .duration(500)
@@ -107,8 +107,8 @@ public class MainActivity extends ActionBarActivity implements SimpleAdapter.Cli
                             .duration(500)
                             .playOn(actionButton);
 
-                    actionButton.setBackgroundResource(R.drawable.fab_secundary);
-                    footerbar.setBackgroundColor(getResources().getColor(R.color.accentColor));
+                    //actionButton.setBackgroundResource(R.drawable.fab_secundary);
+                    //footerbar.setBackgroundColor(getResources().getColor(R.color.accentColor));
                     listCart.setVisibility(View.VISIBLE);
                     footerText1.setVisibility(View.VISIBLE);
                     footerText2.setVisibility(View.GONE);
