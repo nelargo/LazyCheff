@@ -5,6 +5,7 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
+import android.util.Log;
 
 import com.madgoatstd.lazycheff.adapters.Ingredient;
 
@@ -62,6 +63,16 @@ public class IngredienteDataSource {
         cursor.close();
         return ingredientes;
     }
+
+    public int getLastId(){
+        Cursor cursor = database.rawQuery("SELECT "+SQLiteHelper.INGREDIENTE_COLUMN_ID+" FROM "+SQLiteHelper.TABLE_INGREDIENTE +" ORDER BY "+SQLiteHelper.INGREDIENTE_COLUMN_ID+" DESC LIMIT 1",null);
+        cursor.moveToFirst();
+        int p=0;
+        if(cursor.getCount() > 0)
+            p = cursor.getInt(0);
+        return p;
+    }
+
 
     private Ingrediente cursorToIngrediente(Cursor cursor) {
         Ingrediente ingrediente = new Ingrediente(cursor.getInt(0),cursor.getString(1));

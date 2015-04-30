@@ -23,6 +23,9 @@ import com.daimajia.androidanimations.library.Techniques;
 import com.daimajia.androidanimations.library.YoYo;
 import com.madgoatstd.lazycheff.adapters.Ingredient;
 import com.madgoatstd.lazycheff.adapters.SimpleAdapter;
+import com.madgoatstd.lazycheff.database.Ingrediente;
+import com.madgoatstd.lazycheff.database.IngredienteDataSource;
+import com.madgoatstd.lazycheff.webservice.SoapRequest;
 import com.oguzdev.circularfloatingactionmenu.library.FloatingActionButton;
 
 import java.util.ArrayList;
@@ -38,7 +41,7 @@ public class MainActivity extends ActionBarActivity implements SimpleAdapter.Cli
     private LinearLayout footer;
     private RelativeLayout footerbar;
     private SimpleAdapter simpleAdapterIng, simpleAdapterCart;
-    private List<Ingredient> cart;
+    private List<Ingrediente> cart;
     private TextView footerText2, footerText1;
     FloatingActionButton actionButton;
     FloatingActionButton.LayoutParams normal;
@@ -49,6 +52,7 @@ public class MainActivity extends ActionBarActivity implements SimpleAdapter.Cli
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        new SoapRequest(MainActivity.this).consumirWebService();
         mContext = this;
         toolbar = (Toolbar) findViewById(R.id.app_bar);
         setSupportActionBar(toolbar);
@@ -148,16 +152,19 @@ public class MainActivity extends ActionBarActivity implements SimpleAdapter.Cli
 
     }
 
-    public static List<Ingredient> getData() {
+    public List<Ingrediente> getData() {
         /* Obtener lista de ingredientes */
-        List<Ingredient> data = new ArrayList<>();
-        String[] titles = {"Tomate", "Pollo", "Queso", "Carne de Cerdo", "Tocino", "Huevo", "Papa", "Carne de Vacuno", "Acelga", "Pepino", "Manzana", "Pera", "Plátano", "Manjar"};
+        IngredienteDataSource ingredienteDataSource = new IngredienteDataSource(this.mContext);
+        ingredienteDataSource.open();
+        List<Ingrediente> data = ingredienteDataSource.getAllIngredientes();
+        ingredienteDataSource.close();
+        /*String[] titles = {"Tomate", "Pollo", "Queso", "Carne de Cerdo", "Tocino", "Huevo", "Papa", "Carne de Vacuno", "Acelga", "Pepino", "Manzana", "Pera", "Plátano", "Manjar"};
 
         for (int i = 0; i < titles.length; i++) {
             Ingredient current = new Ingredient();
             current.name = titles[i];
             data.add(current);
-        }
+        }*/
         return data;
     }
 
@@ -180,14 +187,14 @@ public class MainActivity extends ActionBarActivity implements SimpleAdapter.Cli
     @Override
     public void itemClicked(View view, int position, int type) {
         if (type == TYPE_INGREDIENTS) {
-            Ingredient toMove = simpleAdapterIng.getItem(position);
+            Ingrediente toMove = simpleAdapterIng.getItem(position);
             if (simpleAdapterIng.removeItem(toMove, position)) {
                 simpleAdapterCart.addItem(toMove);
 
             }
         }
         if (type == TYPE_CART) {
-            Ingredient toMove = simpleAdapterCart.getItem(position);
+            Ingrediente toMove = simpleAdapterCart.getItem(position);
             if (simpleAdapterCart.removeItem(toMove, position)) {
                 simpleAdapterIng.addItem(toMove);
             }

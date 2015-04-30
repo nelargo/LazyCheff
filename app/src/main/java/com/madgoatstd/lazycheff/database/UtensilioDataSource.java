@@ -61,6 +61,15 @@ public class UtensilioDataSource {
         return utensilios;
     }
 
+    public int getLastId(){
+        Cursor cursor = database.rawQuery("SELECT "+SQLiteHelper.UTENSILIO_COLUMN_ID+" FROM "+SQLiteHelper.TABLE_UTENSILIO +" ORDER BY "+SQLiteHelper.UTENSILIO_COLUMN_ID+" DESC LIMIT 1",null);
+        cursor.moveToFirst();
+        int p=0;
+        if(cursor.getCount() > 0)
+            p = cursor.getInt(0);
+        return p;
+    }
+
     private Utensilio cursorToUtensilio(Cursor cursor) {
         Utensilio utensilio = new Utensilio(cursor.getInt(0),cursor.getString(1));
         return utensilio;

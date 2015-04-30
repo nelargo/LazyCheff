@@ -11,6 +11,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.madgoatstd.lazycheff.R;
+import com.madgoatstd.lazycheff.database.Ingrediente;
 
 import java.util.Collections;
 import java.util.List;
@@ -22,11 +23,11 @@ public class SimpleAdapter extends RecyclerView.Adapter<SimpleAdapter.MyViewHold
     private LayoutInflater inflater;
     private View container;
     private ClickListener clickListener;
-    List<Ingredient> data = Collections.emptyList();
+    List<Ingrediente> data = Collections.emptyList();
     int lastPosition = -1;
     private int type;
 
-    public SimpleAdapter(Context context, List<Ingredient> data, int type) {
+    public SimpleAdapter(Context context, List<Ingrediente> data, int type) {
         inflater = LayoutInflater.from(context);
         mContext = context;
         this.data = data;
@@ -37,7 +38,7 @@ public class SimpleAdapter extends RecyclerView.Adapter<SimpleAdapter.MyViewHold
         this.clickListener = clickListener;
     }
 
-    public boolean removeItem(Ingredient toRemove, int position) {
+    public boolean removeItem(Ingrediente toRemove, int position) {
         if (data.remove(toRemove)) {
             notifyItemRemoved(position);
             return true;
@@ -46,11 +47,11 @@ public class SimpleAdapter extends RecyclerView.Adapter<SimpleAdapter.MyViewHold
         return false;
     }
 
-    public Ingredient getItem(int position) {
+    public Ingrediente getItem(int position) {
         return data.get(position);
     }
 
-    public void addItem(Ingredient ingredient) {
+    public void addItem(Ingrediente ingredient) {
         data.add(0, ingredient);
         notifyItemInserted(0);
 
@@ -66,8 +67,8 @@ public class SimpleAdapter extends RecyclerView.Adapter<SimpleAdapter.MyViewHold
 
     @Override
     public void onBindViewHolder(MyViewHolder holder, int position) {
-        Ingredient current = data.get(position);
-        holder.title.setText(current.name);
+        Ingrediente current = data.get(position);
+        holder.title.setText(current.getNombre());
         setAnimation(holder.itemView, position);
     }
 
