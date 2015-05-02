@@ -7,8 +7,14 @@ import android.util.Log;
 
 import com.madgoatstd.lazycheff.database.Ingrediente;
 import com.madgoatstd.lazycheff.database.IngredienteDataSource;
+import com.madgoatstd.lazycheff.database.IngredienteRecetaDataSource;
+import com.madgoatstd.lazycheff.database.Ingrediente_Receta;
+import com.madgoatstd.lazycheff.database.Receta;
+import com.madgoatstd.lazycheff.database.RecipeDataSource;
 import com.madgoatstd.lazycheff.database.Utensilio;
 import com.madgoatstd.lazycheff.database.UtensilioDataSource;
+import com.madgoatstd.lazycheff.database.UtensilioRecetaDataSource;
+import com.madgoatstd.lazycheff.database.Utensilio_Receta;
 
 import org.ksoap2.SoapEnvelope;
 import org.ksoap2.serialization.SoapObject;
@@ -33,15 +39,18 @@ public class SoapRequest{
     public void consumirWebService(){
         IngredienteDataSource ingredienteDataSource = new IngredienteDataSource(contexto);
         UtensilioDataSource utensilioDataSource = new UtensilioDataSource(contexto);
+        RecipeDataSource recipeDataSource = new RecipeDataSource(contexto);
 
         ingredienteDataSource.open();
         utensilioDataSource.open();
+        recipeDataSource.open();
         new LlamarWebService().execute("getUltimosIngredientes",String.valueOf(ingredienteDataSource.getLastId()));
         new LlamarWebService().execute("getUltimosUtensilios",String.valueOf(utensilioDataSource.getLastId()));
-        //new LlamarWebService().execute("getUltimasRecetas","0");
+        new LlamarWebService().execute("getUltimasRecetas",String.valueOf(recipeDataSource.getLastId()));
 
         ingredienteDataSource.close();
         utensilioDataSource.close();
+        recipeDataSource.close();
 
     }
 
@@ -49,9 +58,12 @@ public class SoapRequest{
         List<Utensilio> utensilios = new ArrayList<Utensilio>();
         UtensilioDataSource ingredienteDataSource = new UtensilioDataSource(contexto);
         ingredienteDataSource.open();
-        for(int i=0; i < resultado.size(); i++){
-            ingredienteDataSource.createUtensilio(Integer.valueOf(resultado.get(i).getProperty("id").toString()), resultado.get(i).getProperty("nombre").toString());
-            utensilios.add(new Utensilio(Integer.valueOf(resultado.get(i).getProperty("id").toString()),resultado.get(i).getProperty("nombre").toString()));
+        if(resultado != null) {
+
+            for (int i = 0; i < resultado.size(); i++) {
+                ingredienteDataSource.createUtensilio(Integer.valueOf(resultado.get(i).getProperty("id").toString()), resultado.get(i).getProperty("nombre").toString());
+                utensilios.add(new Utensilio(Integer.valueOf(resultado.get(i).getProperty("id").toString()), resultado.get(i).getProperty("nombre").toString()));
+            }
         }
         ingredienteDataSource.close();
     }
@@ -59,31 +71,54 @@ public class SoapRequest{
         List<Ingrediente> ingredientes = new ArrayList<Ingrediente>();
         IngredienteDataSource ingredienteDataSource = new IngredienteDataSource(contexto);
         ingredienteDataSource.open();
-        for(int i=0; i < resultado.size(); i++){
-            ingredienteDataSource.createIngrediente(Integer.valueOf(resultado.get(i).getProperty("id").toString()),resultado.get(i).getProperty("nombre").toString());
-            ingredientes.add(new Ingrediente(Integer.valueOf(resultado.get(i).getProperty("id").toString()),resultado.get(i).getProperty("nombre").toString()));
+
+        if(resultado != null) {
+            for (int i = 0; i < resultado.size(); i++) {
+                ingredienteDataSource.createIngrediente(Integer.valueOf(resultado.get(i).getProperty("id").toString()), resultado.get(i).getProperty("nombre").toString());
+                ingredientes.add(new Ingrediente(Integer.valueOf(resultado.get(i).getProperty("id").toString()), resultado.get(i).getProperty("nombre").toString()));
+            }
         }
         ingredienteDataSource.close();
 
     }
     private void procesarRecetas(){
-        Log.v("Pichula","Recetas:"+resultado.toString());
-        for(int i=0; i<resultado.size(); i++){
-            SoapObject receta = resultado.get(i);
-            Log.v("Pichula","ID: "+receta.getProperty("id").toString());
-            Log.v("Pichula","Nombre: "+receta.getProperty("nombre").toString());
-            Log.v("Pichula","Dificultad: "+receta.getProperty("dificultad").toString());
-            Log.v("Pichula","Tiempo: "+receta.getProperty("tiempo").toString());
-            Log.v("Pichula","Indicaciones: "+receta.getProperty("indicaciones").toString());
-            Log.v("Pichula","Imagen: "+receta.getProperty("imagen").toString());
-            Log.v("Pichula","Tipo: "+receta.getProperty("tipo").toString());
-            Log.v("Pichula","->Ingredientes:");
-            Vector<SoapObject>ingredientes = (Vector<SoapObject>)resultado.get(i).getProperty("ingredientes");
-            for(int j=0;j<ingredientes.size(); j++){
-                Log.v("Pichula","ID: "+ingredientes.get(j).getProperty("id"));
-                Log.v("Pichula","Cantidad: "+ingredientes.get(j).getProperty("cantidad"));
+        RecipeDataSource recetas = new RecipeDataSource(contexto);
+        UtensilioRecetaDataSource utensilios= new UtensilioRecetaDataSource(contexto);
+        IngredienteRecetaDataSource ingredientes = new IngredienteRecetaDataSource(contexto);
+
+        recetas.open();
+        ingredientes.open();
+        utensilios.open();
+
+        if(resultado != null) {
+            for (int i = 0; i < resultado.size(); i++) {
+                SoapObject item = resultado.get(i);
+                recetas.createReceta(Integer.valueOf(item.getPropertyAsString("id")),
+                        item.getProperty("nombre").toString(),
+                        item.getPropertyAsString("dificultad"),
+                        item.getPropertyAsString("tiempo"),
+                        item.getPropertyAsString("indicaciones"),
+                        item.getPropertyAsString("imagen"),
+                        item.getPropertyAsString("tipo"));
+                Vector<SoapObject> ing = (Vector<SoapObject>) item.getProperty("ingredientes");
+                for (int j = 0; j < ing.size(); j++) {
+                    SoapObject subitem = ing.get(j);
+                    ingredientes.createIngredienteReceta(Integer.valueOf(subitem.getPropertyAsString("id")), Integer.valueOf(item.getPropertyAsString("id")), subitem.getPropertyAsString("cantidad"));
+
+                }
+
+                Vector<SoapObject> ut = (Vector<SoapObject>) item.getProperty("utensilios");
+                for (int j = 0; j < ut.size(); j++) {
+                    SoapObject subitem = ut.get(j);
+                    utensilios.createUtensilioReceta(Integer.valueOf(subitem.getPropertyAsString("id")), Integer.valueOf(item.getPropertyAsString("id")));
+
+                }
             }
         }
+        recetas.close();
+        utensilios.close();
+        ingredientes.close();
+
     }
 
     private class LlamarWebService extends AsyncTask<String,String,Vector<SoapObject>> {

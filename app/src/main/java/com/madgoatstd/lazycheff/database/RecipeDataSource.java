@@ -54,7 +54,7 @@ public class RecipeDataSource {
         return newReceta;
     }
 
-    public List<Receta> getAllComments() {
+    public List<Receta> getAllRecetas() {
         List<Receta> recetas = new ArrayList<Receta>();
 
         Cursor cursor = database.query(SQLiteHelper.TABLE_RECETA,
@@ -69,6 +69,15 @@ public class RecipeDataSource {
         // make sure to close the cursor
         cursor.close();
         return recetas;
+    }
+
+    public int getLastId(){
+        Cursor cursor = database.rawQuery("SELECT "+SQLiteHelper.RECETA_COLUMN_ID+" FROM "+SQLiteHelper.TABLE_RECETA +" ORDER BY "+SQLiteHelper.RECETA_COLUMN_ID+" DESC LIMIT 1",null);
+        cursor.moveToFirst();
+        int p=0;
+        if(cursor.getCount() > 0)
+            p = cursor.getInt(0);
+        return p;
     }
 
     private Receta cursorToReceta(Cursor cursor) {

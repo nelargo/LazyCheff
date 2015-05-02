@@ -12,8 +12,11 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.CheckBox;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.RatingBar;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -33,6 +36,7 @@ import java.util.List;
 
 
 public class MainActivity extends ActionBarActivity implements SimpleAdapter.ClickListener {
+    private static final String TAG = "MainActivity";
     private static int TYPE_INGREDIENTS = 0;
     private static int TYPE_CART = 1;
     Context mContext;
@@ -129,20 +133,56 @@ public class MainActivity extends ActionBarActivity implements SimpleAdapter.Cli
             public void onClick(View view) {
                 new MaterialDialog.Builder(mContext)
                         .title("Opciones de Búsqueda")
-                        .customView(R.layout.dialog_options,true)
+                        .customView(R.layout.dialog_options, true)
                         .positiveText("Buscar")
                         .negativeText("Volver")
+                        .autoDismiss(false)
                         .callback(new MaterialDialog.ButtonCallback() {
                             @Override
                             public void onPositive(MaterialDialog dialog) {
                                 super.onPositive(dialog);
-                                startActivityForResult(new Intent(mContext,ResultsActivity.class),0);
+                                View v = dialog.getCustomView();
+                                CheckBox only = (CheckBox) v.findViewById(R.id.dialog_checkBox);
+                                EditText time = (EditText) v.findViewById(R.id.dialog_editText);
+                                RatingBar difficult = (RatingBar) v.findViewById(R.id.dialog_ratingBar);
+                                Boolean solo = only.isChecked();
+                                String tiempo = time.getText().toString();
+                                int dificultad = (int) difficult.getRating();
+
+                                if (tiempo == null || tiempo.compareTo("") == 0) {
+                                    YoYo.with(Techniques.Tada).duration(500).playOn(time);
+                                    //Toast.makeText(mContext, "Ingrese el tiempo máximo. Ingrese 0 (cero) para mostrar todas.",Toast.LENGTH_LONG ).show();
+                                    return;
+                                }
+
+                                if (dificultad == 0) {
+                                    YoYo.with(Techniques.Tada).duration(500).playOn(difficult);
+                                    //Toast.makeText(mContext, "Seleccione una dificultad",Toast.LENGTH_LONG ).show();
+                                    return;
+                                }
+
+
+                                ArrayList<Integer> ids = new ArrayList<>();
+                                for(Ingrediente a : ((SimpleAdapter) listCart.getAdapter()).getAllItems()){
+                                    ids.add(a.getId());
+                                }
+
+                                Bundle bundle = new Bundle();
+                                bundle.putIntegerArrayList("INGREDIENTES", ids);
+                                Intent i = new Intent(mContext, ResultsActivity.class);
+                                i.putExtra("SOLO", solo);
+                                i.putExtra("TIEMPO", tiempo);
+                                i.putExtra("DIFICULTAD", dificultad);
+                                i.putExtra("INGREDIENTES", bundle);
+
+                                startActivity(i);
+                                dialog.dismiss();
                             }
 
                             @Override
                             public void onNegative(MaterialDialog dialog) {
                                 super.onNegative(dialog);
-                                Toast.makeText(mContext, "Buscando", Toast.LENGTH_SHORT).show();
+                                dialog.dismiss();
                             }
                         })
                         .show();

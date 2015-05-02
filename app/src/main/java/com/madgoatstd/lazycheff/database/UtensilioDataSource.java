@@ -44,6 +44,20 @@ public class UtensilioDataSource {
         return newUtensilio;
     }
 
+    public Utensilio getUtensilio(int id){
+
+        Cursor cursor = database.rawQuery("SELECT * FROM "+SQLiteHelper.TABLE_UTENSILIO+" WHERE "+SQLiteHelper.UTENSILIO_COLUMN_ID+" = "+id,null);
+
+        cursor.moveToFirst();
+        if(cursor.getCount()==0)
+            return null;
+
+        Utensilio ingrediente = cursorToUtensilio(cursor);
+        // make sure to close the cursor
+        cursor.close();
+        return ingrediente;
+    }
+
     public List<Utensilio> getAllUtensilios() {
         List<Utensilio> utensilios = new ArrayList<Utensilio>();
 

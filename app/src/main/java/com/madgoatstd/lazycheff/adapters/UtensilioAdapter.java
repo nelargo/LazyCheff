@@ -12,66 +12,58 @@ import android.widget.TextView;
 
 import com.madgoatstd.lazycheff.R;
 import com.madgoatstd.lazycheff.database.Ingrediente;
+import com.madgoatstd.lazycheff.database.IngredienteDataSource;
+import com.madgoatstd.lazycheff.database.Ingrediente_Receta;
+import com.madgoatstd.lazycheff.database.Utensilio;
+import com.madgoatstd.lazycheff.database.UtensilioDataSource;
+import com.madgoatstd.lazycheff.database.Utensilio_Receta;
 
+import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-public class SimpleAdapter extends RecyclerView.Adapter<SimpleAdapter.MyViewHolder> {
+public class UtensilioAdapter extends RecyclerView.Adapter<UtensilioAdapter.MyViewHolder> {
     private static int TYPE_INGREDIENTS = 0;
     private static int TYPE_CART = 1;
     private Context mContext;
     private LayoutInflater inflater;
     private View container;
-    private ClickListener clickListener;
-    List<Ingrediente> data = Collections.emptyList();
+    //List<Utensilio_Receta> data = Collections.emptyList();
+    List<Utensilio> data = Collections.emptyList();
     int lastPosition = -1;
-    private int type;
 
-    public List<Ingrediente> getAllItems(){
+    public List<Utensilio> getAllItems(){
         return data;
     }
 
-    public SimpleAdapter(Context context, List<Ingrediente> data, int type) {
+    public UtensilioAdapter(Context context, List<Utensilio_Receta> data) {
         inflater = LayoutInflater.from(context);
         mContext = context;
-        this.data = data;
-        this.type = type;
+        this.data = getUtensilios(data);
     }
 
-    public void setClickListener(ClickListener clickListener) {
-        this.clickListener = clickListener;
-    }
-
-    public boolean removeItem(Ingrediente toRemove, int position) {
-        if (data.remove(toRemove)) {
-            notifyItemRemoved(position);
-            return true;
+    private List<Utensilio> getUtensilios(List<Utensilio_Receta> a){
+        List<Utensilio> result = new ArrayList<>();
+        UtensilioDataSource i = new UtensilioDataSource(mContext);
+        i.open();
+        for(Utensilio_Receta u : a) {
+            result.add(i.getUtensilio(u.getId_utensilio()));
         }
-
-        return false;
+        i.close();
+        return result;
     }
 
-    public Ingrediente getItem(int position) {
-        return data.get(position);
-    }
-
-    public void addItem(Ingrediente ingredient) {
-        data.add(0, ingredient);
-        notifyItemInserted(0);
-
-
-    }
 
     @Override
     public MyViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         container = inflater.inflate(R.layout.simple_row, parent, false);
-        MyViewHolder holder = new MyViewHolder(container, this.type);
+        MyViewHolder holder = new MyViewHolder(container);
         return holder;
     }
 
     @Override
     public void onBindViewHolder(MyViewHolder holder, int position) {
-        Ingrediente current = data.get(position);
+        Utensilio current = data.get(position);
         holder.title.setText(current.getNombre());
         setAnimation(holder.itemView, position);
     }
@@ -90,39 +82,24 @@ public class SimpleAdapter extends RecyclerView.Adapter<SimpleAdapter.MyViewHold
     }
 
 
-    class MyViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
+    class MyViewHolder extends RecyclerView.ViewHolder{
         TextView title;
         ImageView licon, ricon;
         View container;
         int type;
 
-        public MyViewHolder(View itemView, int type) {
+        public MyViewHolder(View itemView) {
             super(itemView);
             this.type = type;
             this.container = itemView;
             title = (TextView) itemView.findViewById(R.id.listTitle);
             licon = (ImageView) itemView.findViewById(R.id.listIcon);
             ricon = (ImageView) itemView.findViewById(R.id.listAdd);
-            if(type == TYPE_INGREDIENTS){
-                ricon.setImageResource(R.drawable.add_icon_v1);
-            }
-            if(type == TYPE_CART){
-                ricon.setImageResource(R.drawable.remove_icon_v1);
-            }
-            ricon.setOnClickListener(this);
+            licon.setVisibility(View.GONE);
+            ricon.setVisibility(View.GONE);
         }
 
-        @Override
-        public void onClick(View view) {
-            if (view.getId() == R.id.listAdd) {
-                if (clickListener != null) {
-                    clickListener.itemClicked(view, getAdapterPosition(), this.type);
-                }
-            }
-        }
+
     }
 
-    public interface ClickListener {
-        public void itemClicked(View view, int position, int type);
-    }
 }

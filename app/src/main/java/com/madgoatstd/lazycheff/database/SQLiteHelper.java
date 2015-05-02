@@ -69,8 +69,8 @@ public class SQLiteHelper extends SQLiteOpenHelper {
             + RECETA_COLUMN_ID + " integer primary key, "
             + RECETA_COLUMN_NOMBRE + " text not null,"
             + RECETA_COLUMN_DIFICULTAD + " text not null,"
-            + RECETA_COLUMN_TIEMPO + "text not null,"
-            + RECETA_COLUMN_INDICACIONES + "text not null,"
+            + RECETA_COLUMN_TIEMPO + " text not null,"
+            + RECETA_COLUMN_INDICACIONES + " text not null,"
             + RECETA_COLUMN_TIPO + " text not null,"
             + RECETA_COLUMN_IMAGEN + " text not null"
             + ");";
@@ -78,7 +78,7 @@ public class SQLiteHelper extends SQLiteOpenHelper {
     private static final String DATABASE_CREATE_INGREDIENTE_RECETA = "create table "
             + TABLE_INGREDIENTE_RECETA
             + "("
-            + INGREDIENTE_RECETA_COLUMN_ID + " integer primary key, "
+            + INGREDIENTE_RECETA_COLUMN_ID + " integer primary key autoincrement, "
             + INGREDIENTE_RECETA_COLUMN_ID_INGREDIENTE + " integer not null,"
             + INGREDIENTE_RECETA_COLUMN_ID_RECETA + " integer not null,"
             + INGREDIENTE_RECETA_COLUMN_CANTIDAD + " integer not null"
@@ -87,7 +87,7 @@ public class SQLiteHelper extends SQLiteOpenHelper {
     private static final String DATABASE_CREATE_UTENSILIO_RECETA = "create table "
             + TABLE_UTENSILIO_RECETA
             + "("
-            + UTENSILIO_RECETA_COLUMN_ID + " integer primary key, "
+            + UTENSILIO_RECETA_COLUMN_ID + " integer primary key autoincrement, "
             + UTENSILIO_RECETA_COLUMN_ID_RECETA + " text not null,"
             + UTENSILIO_RECETA_COLUMN_ID_UTENSILIO + " text not null"
             + ");";

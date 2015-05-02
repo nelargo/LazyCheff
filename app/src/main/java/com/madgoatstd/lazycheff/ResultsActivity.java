@@ -8,25 +8,32 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.util.DisplayMetrics;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 
 import com.daimajia.androidanimations.library.Techniques;
 import com.daimajia.androidanimations.library.YoYo;
-import com.madgoatstd.lazycheff.adapters.Recipe;
 import com.madgoatstd.lazycheff.adapters.ResultAdapter;
+import com.madgoatstd.lazycheff.database.IngredienteRecetaDataSource;
+import com.madgoatstd.lazycheff.database.Ingrediente_Receta;
+import com.madgoatstd.lazycheff.database.Receta;
+import com.madgoatstd.lazycheff.database.RecipeDataSource;
 import com.nineoldandroids.animation.Animator;
 
 import java.util.ArrayList;
 import java.util.List;
 
 
-public class ResultsActivity extends ActionBarActivity implements ResultAdapter.ClickListener{
+public class ResultsActivity extends ActionBarActivity implements ResultAdapter.ClickListener {
+
+    private static final String TAG = "ResultActivity";
     Context mContext;
     private Toolbar toolbar;
     private RecyclerView recyclerView;
     private ResultAdapter adapter;
+    Bundle extras;
 
 
     @Override
@@ -38,6 +45,7 @@ public class ResultsActivity extends ActionBarActivity implements ResultAdapter.
         setSupportActionBar(toolbar);
         toolbar.setLogo(R.mipmap.ic_launcher1);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        extras = getIntent().getExtras();
 
         // in Activity Context
         /*icon = new ImageView(this); // Create an icon
@@ -53,18 +61,133 @@ public class ResultsActivity extends ActionBarActivity implements ResultAdapter.
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
     }
 
-    public static List<Recipe> getData() {
-        /* Obtener lista de ingredientes */
-        List<Recipe> data = new ArrayList<>();
-        String[] titles = {"Tomate", "Pollo", "Queso", "Carne de Cerdo", "Tocino", "Huevo", "Papa", "Carne de Vacuno", "Acelga", "Pepino", "Manzana", "Pera", "Plátano", "Manjar"};
+    @Override
+    protected void onPause() {
+        super.onPause();
+        Log.i(TAG,"onPause");
+    }
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        Log.i(TAG,"onDestroy");
+    }
 
-        for (int i = 0; i < titles.length; i++) {
-            Recipe current = new Recipe();
-            current.name = titles[i];
-            data.add(current);
-        }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        Log.i(TAG,"onResume");
+    }
+
+    public List<Receta> getData() {
+        /* Obtener lista de ingredientes */
+
+        Boolean isOnly = extras.getBoolean("SOLO");
+        int dificultad = extras.getInt("DIFICULTAD");
+        String tiempo = extras.getString("TIEMPO");
+        Bundle bundle = extras.getBundle("INGREDIENTES");
+        List<Integer> ids = bundle.getIntegerArrayList("INGREDIENTES");
+
+        RecipeDataSource dataSource = new RecipeDataSource(mContext);
+        IngredienteRecetaDataSource ingredienteSource = new IngredienteRecetaDataSource(mContext);
+        ingredienteSource.open();
+        dataSource.open();
+
+        List<Receta> data = dataSource.getAllRecetas();
+        List<Ingrediente_Receta> ingredientes_receta = ingredienteSource.getAllIngrediente_Recetas();
+
+        dataSource.close();
+        ingredienteSource.close();
+
+        if(data!= null)
+            data = filterByDifficult(data,dificultad);
+        if(data!= null)
+            data = filterByTime(data, Integer.valueOf(tiempo));
+        if(data!= null)
+            data = filterByIngredientes(data, ingredientes_receta,ids,isOnly);
+
         return data;
     }
+
+    private List<Receta> filterByIngredientes(List<Receta> recetas,List<Ingrediente_Receta> ingredientes_receta,List<Integer> ingredientes, Boolean isOnly){
+        if(recetas.size()>0){
+            List<Receta> filtrado = new ArrayList<>();
+            for (Receta r : recetas) {
+                List<Integer> ids = getIngredientsInReceta(r.getId(),ingredientes_receta);
+
+                /*if(aContainsAllOfB(ids, ingredientes)){
+                    if(isOnly && ids.size()==ingredientes.size())
+                        filtrado.add(r);
+                    if(!isOnly)
+                        filtrado.add(r);
+                }*/
+                if(isOnly && aContainsAllOfB(ids, ingredientes))
+                    filtrado.add(r);
+                if(!isOnly && aContainsAnyofB(ids, ingredientes))
+                    filtrado.add(r);
+            }
+            return filtrado;
+        }
+        return null;
+    }
+
+    private Boolean aContainsAllOfB(List<Integer> a,List<Integer> b){
+
+        for(int i= 0; i < b.size();i++){
+            if(!a.contains(b.get(i))){
+                return false;
+            }
+        }
+        return true;
+    }
+
+    private Boolean aContainsAnyofB(List<Integer> a,List<Integer> b){
+
+        for(int i= 0; i < b.size();i++){
+            if(a.contains(b.get(i))){
+                return true;
+            }
+        }
+        return false;
+    }
+
+    private List<Integer> getIngredientsInReceta(int id_receta, List<Ingrediente_Receta> ingredientes_recetas ){
+        List<Integer> ids = new ArrayList<>();
+        for(Ingrediente_Receta ir:ingredientes_recetas){
+            if(ir.getId_receta() == id_receta)
+                ids.add(ir.getId_ingrediente());
+        }
+        return ids;
+    }
+
+    private List<Receta> filterByTime(List<Receta> recetas,int t){
+        if(recetas.size()>0){
+            List<Receta> filtrado = new ArrayList<>();
+
+            for (Receta r : recetas) {
+                if (Integer.valueOf(r.getTiempo())<= t) {
+                    filtrado.add(r);
+                }
+            }
+
+            return filtrado;
+        }
+        return null;
+    }
+    private List<Receta> filterByDifficult(List<Receta> recetas,int d){
+        if(recetas.size()>0){
+            List<Receta> filtrado = new ArrayList<>();
+
+            for (Receta r : recetas) {
+                if (Integer.valueOf(r.getDificultad())<= d) {
+                    filtrado.add(r);
+                }
+            }
+            return filtrado;
+        }
+        return null;
+    }
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -76,13 +199,12 @@ public class ResultsActivity extends ActionBarActivity implements ResultAdapter.
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         int id = item.getItemId();
-        if (id == R.id.action_filter) {
+
+        //noinspection SimplifiableIfStatement
+        if (id == android.R.id.home) {
+            finish();
             return true;
         }
-        /*if(id == android.R.id.home){
-            onBackPressed();
-            return true;
-        }*/
         return super.onOptionsItemSelected(item);
     }
 
@@ -94,7 +216,7 @@ public class ResultsActivity extends ActionBarActivity implements ResultAdapter.
 
 
     @Override
-    public void itemClicked(View view, int position) {
+    public void itemClicked(View view, final int position, final List<Receta> actual) {
         YoYo.with(Techniques.Tada)
                 .duration(600).withListener(new Animator.AnimatorListener() {
             @Override
@@ -104,7 +226,18 @@ public class ResultsActivity extends ActionBarActivity implements ResultAdapter.
 
             @Override
             public void onAnimationEnd(Animator animation) {
-                Intent p = new Intent(mContext,RecipeActivity.class);
+                Receta r = actual.get(position);
+                Bundle extras = new Bundle();
+                extras.putInt("ID",r.getId());
+                extras.putString("NOMBRE", r.getNombre());
+                extras.putString("DIFICULTAD", r.getDificultad());
+                extras.putString("TIEMPO", r.getTiempo());
+                extras.putString("INDICACIONES", r.getIndicaciones());
+                extras.putString("IMAGEN", r.getImagen());
+                extras.putString("TIPO",r.getTipo());
+
+                Intent p = new Intent(mContext, RecipeActivity.class);
+                p.putExtra("RECETA", extras);
                 startActivity(p);
             }
 

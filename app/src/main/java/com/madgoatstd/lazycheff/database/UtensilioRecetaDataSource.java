@@ -30,11 +30,11 @@ public class UtensilioRecetaDataSource {
         dbHelper.close();
     }
 
-    public Utensilio_Receta createUtensilio(int id, int utensilio, int receta){
+    public Utensilio_Receta createUtensilioReceta(int id_utensilio, int id_receta){
         ContentValues values = new ContentValues();
-        values.put(SQLiteHelper.UTENSILIO_RECETA_COLUMN_ID, id);
-        values.put(SQLiteHelper.UTENSILIO_RECETA_COLUMN_ID_UTENSILIO, utensilio);
-        values.put(SQLiteHelper.UTENSILIO_RECETA_COLUMN_ID_RECETA, receta);
+        //values.put(SQLiteHelper.UTENSILIO_RECETA_COLUMN_ID, id);
+        values.put(SQLiteHelper.UTENSILIO_RECETA_COLUMN_ID_UTENSILIO, id_utensilio);
+        values.put(SQLiteHelper.UTENSILIO_RECETA_COLUMN_ID_RECETA, id_receta);
         long insertId = database.insert(SQLiteHelper.TABLE_UTENSILIO_RECETA, null,
                 values);
         Cursor cursor = database.query(SQLiteHelper.TABLE_UTENSILIO_RECETA,
@@ -44,6 +44,23 @@ public class UtensilioRecetaDataSource {
         Utensilio_Receta newUtensilio_Receta = cursorToUtensilio_Receta(cursor);
         cursor.close();
         return newUtensilio_Receta;
+    }
+
+    public List<Utensilio_Receta> getUtensilio_Receta(int anInt) {
+        List<Utensilio_Receta> utensilio_Recetas = new ArrayList<Utensilio_Receta>();
+
+        Cursor cursor = database.rawQuery("SELECT * FROM "+SQLiteHelper.TABLE_UTENSILIO_RECETA+" WHERE "+SQLiteHelper.UTENSILIO_RECETA_COLUMN_ID_RECETA+" = "+anInt,null);
+
+        cursor.moveToFirst();
+        while (!cursor.isAfterLast()) {
+            Utensilio_Receta utensilio_Receta = cursorToUtensilio_Receta(cursor);
+            utensilio_Recetas.add(utensilio_Receta);
+            cursor.moveToNext();
+        }
+        // make sure to close the cursor
+        cursor.close();
+        return utensilio_Recetas;
+
     }
 
     public List<Utensilio_Receta> getAllUtensilio_Recetas() {
@@ -64,9 +81,11 @@ public class UtensilioRecetaDataSource {
     }
 
     private Utensilio_Receta cursorToUtensilio_Receta(Cursor cursor) {
-        Utensilio_Receta utensilio_Receta = new Utensilio_Receta(cursor.getInt(0),cursor.getInt(2), cursor.getInt(1));
+        Utensilio_Receta utensilio_Receta = new Utensilio_Receta(cursor.getInt(0),cursor.getInt(1), cursor.getInt(2));
         return utensilio_Receta;
     }
-} 
+
+
+}
 
 

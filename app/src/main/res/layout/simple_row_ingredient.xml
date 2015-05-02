@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="64dp"
+    android:paddingTop="6dp"
+    android:paddingBottom="6dp">
+
+    <TextView
+        android:id="@+id/listTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ingredient Name"
+        android:layout_marginLeft="24dp"
+        android:textColor="@color/primaryColor"
+        android:textSize="20sp"/>
+    <TextView
+        android:id="@+id/asdf"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/listTitle"
+        android:text="Cantidad:"
+        android:layout_marginLeft="24dp"
+        android:textSize="18sp"
+        android:layout_centerVertical="true"/>
+    <TextView
+        android:id="@+id/cantidad"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/listTitle"
+        android:layout_toRightOf="@+id/asdf"
+        android:layout_marginLeft="16dp"
+        android:text="x"
+        android:textSize="18sp"
+        android:layout_centerVertical="true"/>
+
+</RelativeLayout>

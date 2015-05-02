@@ -12,14 +12,14 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Sólo estos ingredientes"
+            android:text="Todos los ingredientes\n seleccionados"
             android:id="@+id/textView"
             android:textSize="16sp" />
 
         <CheckBox
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/checkBox"
+            android:id="@+id/dialog_checkBox"
             android:checked="false"
             android:textSize="16sp" />
     </LinearLayout>
@@ -46,7 +46,7 @@
             android:layout_height="wrap_content"
             android:inputType="number"
             android:ems="10"
-            android:id="@+id/editText"
+            android:id="@+id/dialog_editText"
             android:maxLength="3"
             android:paddingTop="16dp"
             android:paddingBottom="16dp"
@@ -78,6 +78,9 @@
         <RatingBar
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/ratingBar" />
+            android:id="@+id/dialog_ratingBar"
+            android:stepSize="1"
+            android:numStars="3"
+            android:progress="1"/>
     </LinearLayout>
 </LinearLayout>

@@ -6,14 +6,26 @@ import android.support.v7.app.ActionBarActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import com.afollestad.materialdialogs.MaterialDialog;
 import com.daimajia.androidanimations.library.Techniques;
 import com.daimajia.androidanimations.library.YoYo;
+import com.madgoatstd.lazycheff.adapters.IngredienteAdapter;
 import com.madgoatstd.lazycheff.adapters.Recipe;
 import com.madgoatstd.lazycheff.adapters.RecipeAdapter;
+import com.madgoatstd.lazycheff.adapters.ResultAdapter;
+import com.madgoatstd.lazycheff.adapters.UtensilioAdapter;
+import com.madgoatstd.lazycheff.database.Ingrediente;
+import com.madgoatstd.lazycheff.database.IngredienteRecetaDataSource;
+import com.madgoatstd.lazycheff.database.Ingrediente_Receta;
+import com.madgoatstd.lazycheff.database.Receta;
+import com.madgoatstd.lazycheff.database.RecipeDataSource;
+import com.madgoatstd.lazycheff.database.SQLiteHelper;
+import com.madgoatstd.lazycheff.database.UtensilioRecetaDataSource;
+import com.madgoatstd.lazycheff.database.Utensilio_Receta;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -45,23 +57,32 @@ public class RecipeActivity extends ActionBarActivity implements RecipeAdapter.C
 
     }
 
-    public List<Recipe> getData(){
-         /* Obtener lista de ingredientes */
-        List<Recipe> data = new ArrayList<>();
-        String[] titles = {"Tomate", "Pollo", "Queso", "Carne de Cerdo"};
+    public List<String> getData(){
+        List<String> data = new ArrayList<>();
+        Bundle extra = getIntent().getExtras().getBundle("RECETA");
+        Receta receta = new Receta(extra.getInt("ID"),
+                extra.getString("NOMBRE"),
+                extra.getString("DIFICULTAD"),
+                extra.getString("TIEMPO"),
+                extra.getString("INDICACIONES"),
+                extra.getString("TIPO"),
+                extra.getString("IMAGEN"));
 
-        for (int i = 0; i < titles.length; i++) {
-            Recipe current = new Recipe();
-            current.name = titles[i];
-            data.add(current);
-        }
+        Log.i("PICHULA", extra.getString("IMAGEN"));
+
+        data.add(receta.getNombre()+";"+receta.getTipo()+";"+receta.getImagen());
+        data.add(receta.getTiempo()+";"+receta.getDificultad());
+        data.add("Utensilios");
+        data.add("Ingredientes");
+        data.add(receta.getIndicaciones());
+
+
         return data;
     }
 
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.menu_recipe, menu);
         return true;
     }
 
@@ -73,76 +94,64 @@ public class RecipeActivity extends ActionBarActivity implements RecipeAdapter.C
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
+        if (id == android.R.id.home) {
+            finish();
             return true;
         }
 
         return super.onOptionsItemSelected(item);
     }
 
-    private List<String> getTools(){
-        List<String> data = new ArrayList<>();
-        String[] a = {"Sartén", "Espátula"};
-        for(int i = 0; i<a.length;i++)
-            data.add(a[i]);
-        return data;
+    private List<Utensilio_Receta> getTools(){
+        UtensilioRecetaDataSource source = new UtensilioRecetaDataSource(mContext);
+        source.open();
+        List<Utensilio_Receta> ur = source.getUtensilio_Receta(getIntent().getExtras().getBundle("RECETA").getInt("ID"));
+        source.close();
+        return ur;
     }
-    private List<String> getIngredients(){
-        List<String> data = new ArrayList<>();
-        String[] a = {"Huevo", "Tocino"};
-        for(int i = 0; i<a.length;i++)
-            data.add(a[i]);
-        return data;
+    private List<Ingrediente_Receta> getIngredients(){
+        IngredienteRecetaDataSource ingredienteSource = new IngredienteRecetaDataSource(mContext);
+        ingredienteSource.open();
+        List<Ingrediente_Receta> ir = ingredienteSource.getIngrediente_Receta(getIntent().getExtras().getBundle("RECETA").getInt("ID"));
+        ingredienteSource.close();
+        return ir;
     }
 
     @Override
-    public void itemClicked(View view, int position) {
+    public void itemClicked(View view, int position, int type) {
         YoYo.with(Techniques.Tada)
                 .duration(600)
                 .playOn(view);
         MaterialDialog.Builder builder;
+        View v = getLayoutInflater().inflate(R.layout.dialog_list,null);
+        RecyclerView rv = (RecyclerView)v.findViewById(R.id.listado);
+        String titulo = "";
         if(position == 2){
-            builder = new MaterialDialog.Builder(mContext)
-                    .positiveText("Cerrar")
-                    .items(R.array.utensilios)
-                    .title("Utensilios Necesarios")
-                    .callback(new MaterialDialog.ButtonCallback() {
-                        @Override
-                        public void onPositive(MaterialDialog dialog) {
-                            super.onPositive(dialog);
-                            dialog.dismiss();
-                        }
-                    })
-                    .autoDismiss(false)
-                    .itemsCallback(new MaterialDialog.ListCallback() {
-                        @Override
-                        public void onSelection(MaterialDialog materialDialog, View view, int i, CharSequence charSequence) {
-                            return;
-                        }
-                    });
-            builder.show();
+            UtensilioAdapter adapter = new UtensilioAdapter(mContext, getTools());
+            titulo = "Utensilios Necesarios";
+            rv.setAdapter(adapter);
+
         }
         if(position == 3){
-            builder = new MaterialDialog.Builder(mContext)
-                    .autoDismiss(false)
-                .positiveText("Cerrar")
-                    .callback(new MaterialDialog.ButtonCallback() {
-                        @Override
-                        public void onPositive(MaterialDialog dialog) {
-                            super.onPositive(dialog);
-                            dialog.dismiss();
-                        }
-                    })
-                .items(R.array.ingredients)
-                .title("Ingredientes Necesarios")
-                .itemsCallback(new MaterialDialog.ListCallback() {
-                    @Override
-                    public void onSelection(MaterialDialog materialDialog, View view, int i, CharSequence charSequence) {
-                        return;
-                    }
-                });
-            builder.show();
+            IngredienteAdapter adapter = new IngredienteAdapter(mContext, getIngredients());
+            titulo = "Ingredientes Necesarios";
+            rv.setAdapter(adapter);
         }
+        rv.setLayoutManager(new LinearLayoutManager(mContext));
+        builder = new MaterialDialog.Builder(mContext)
+                .positiveText("Cerrar")
+                .customView(v, false)
+                .title(titulo)
+                .callback(new MaterialDialog.ButtonCallback() {
+                    @Override
+                    public void onPositive(MaterialDialog dialog) {
+                        super.onPositive(dialog);
+                        dialog.dismiss();
+                    }
+                })
+                .autoDismiss(false);
+        builder.show();
+
 
 
     }

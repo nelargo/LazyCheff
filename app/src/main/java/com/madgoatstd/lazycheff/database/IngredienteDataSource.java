@@ -64,6 +64,20 @@ public class IngredienteDataSource {
         return ingredientes;
     }
 
+    public Ingrediente getIngrediente(int id){
+
+        Cursor cursor = database.rawQuery("SELECT * FROM "+SQLiteHelper.TABLE_INGREDIENTE+" WHERE "+SQLiteHelper.INGREDIENTE_COLUMN_ID+" = "+id,null);
+
+        cursor.moveToFirst();
+        if(cursor.getCount()<0)
+            return null;
+
+        Ingrediente ingrediente = cursorToIngrediente(cursor);
+        // make sure to close the cursor
+        cursor.close();
+        return ingrediente;
+    }
+
     public int getLastId(){
         Cursor cursor = database.rawQuery("SELECT "+SQLiteHelper.INGREDIENTE_COLUMN_ID+" FROM "+SQLiteHelper.TABLE_INGREDIENTE +" ORDER BY "+SQLiteHelper.INGREDIENTE_COLUMN_ID+" DESC LIMIT 1",null);
         cursor.moveToFirst();

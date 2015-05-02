@@ -33,11 +33,11 @@ public class IngredienteRecetaDataSource {
         dbHelper.close();
     }
 
-    public Ingrediente_Receta createIngredienteReceta(int id, int utensilio, int receta, String cantidad){
+    public Ingrediente_Receta createIngredienteReceta(int id_ingrediente, int id_receta, String cantidad){
         ContentValues values = new ContentValues();
-        values.put(SQLiteHelper.INGREDIENTE_RECETA_COLUMN_ID, id);
-        values.put(SQLiteHelper.INGREDIENTE_RECETA_COLUMN_ID_INGREDIENTE, utensilio);
-        values.put(SQLiteHelper.INGREDIENTE_RECETA_COLUMN_ID_RECETA, receta);
+        //values.put(SQLiteHelper.INGREDIENTE_RECETA_COLUMN_ID, id);
+        values.put(SQLiteHelper.INGREDIENTE_RECETA_COLUMN_ID_INGREDIENTE, id_ingrediente);
+        values.put(SQLiteHelper.INGREDIENTE_RECETA_COLUMN_ID_RECETA, id_receta);
         values.put(SQLiteHelper.INGREDIENTE_RECETA_COLUMN_CANTIDAD, cantidad);
         long insertId = database.insert(SQLiteHelper.TABLE_INGREDIENTE_RECETA, null,
                 values);
@@ -48,6 +48,24 @@ public class IngredienteRecetaDataSource {
         Ingrediente_Receta newIngrediente_Receta = cursorToIngrediente_Receta(cursor);
         cursor.close();
         return newIngrediente_Receta;
+    }
+
+    public List<Ingrediente_Receta> getIngrediente_Receta(int id_receta){
+        List<Ingrediente_Receta> ingrediente_Recetas = new ArrayList<Ingrediente_Receta>();
+
+        Cursor cursor = database.rawQuery("SELECT * FROM "+SQLiteHelper.TABLE_INGREDIENTE_RECETA+" WHERE "+SQLiteHelper.INGREDIENTE_RECETA_COLUMN_ID_RECETA+" = "+id_receta,null);
+
+        cursor.moveToFirst();
+        if(cursor.getCount()==0)
+            return null;
+        while (!cursor.isAfterLast()) {
+            Ingrediente_Receta utensilio_Receta = cursorToIngrediente_Receta(cursor);
+            ingrediente_Recetas.add(utensilio_Receta);
+            cursor.moveToNext();
+        }
+        // make sure to close the cursor
+        cursor.close();
+        return ingrediente_Recetas;
     }
 
     public List<Ingrediente_Receta> getAllIngrediente_Recetas() {
